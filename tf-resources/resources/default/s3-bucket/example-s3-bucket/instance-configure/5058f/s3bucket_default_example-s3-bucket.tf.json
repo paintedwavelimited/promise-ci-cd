@@ -1,0 +1,10 @@
+{
+  "module": {
+    "s3bucket_default_example-s3-bucket": {
+      "bucket_name": "example-s3-bucket",
+      "environment": "dev",
+      "source": "github.com/paintedwavelimited/promise-ci-cd//tf-modules/s3-bucket?ref=main",
+      "versioning_enabled": false
+    }
+  }
+}
