@@ -9,4 +9,4 @@ RUN chmod +x /usr/bin/pipeline.sh
 
 CMD [ "sh", "-c", "pipeline.sh" ]
 ENTRYPOINT []
-LABEL org.opencontainers.image.source=https://github.com/abangser/promise-ci-cd
+LABEL org.opencontainers.image.source=https://github.com/paintedwavelimited/promise-ci-cd

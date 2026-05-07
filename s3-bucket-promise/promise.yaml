@@ -7,7 +7,7 @@ metadata:
   name: s3-bucket
   annotations:
     promise.kratix.io/tf-hash: baa61500b350
-    promise.kratix.io/version: 0.1.1
+    promise.kratix.io/version: 0.1.2
 spec:
   api:
     apiVersion: apiextensions.k8s.io/v1
@@ -58,7 +58,7 @@ spec:
             name: dependencies
           spec:
             containers:
-              - image: ghcr.io/abangser/promise-ci-cd-s3-bucket-dependencies:0.1.1
+              - image: ghcr.io/paintedwavelimited/promise-ci-cd-s3-bucket-dependencies:0.1.2
                 name: add-tf-dependencies
     resource:
       configure:
@@ -73,7 +73,7 @@ spec:
                 command: ["create-and-wait-for-approval"]
                 env:
                   - name: GITHUB_REPOSITORY
-                    value: "abangser/promise-ci-cd"
+                    value: "paintedwavelimited/promise-ci-cd"
                   - name: GITHUB_TOKEN
                     valueFrom:
                       secretKeyRef:
@@ -83,7 +83,7 @@ spec:
                     value: "90s"
               - env:
                   - name: MODULE_SOURCE
-                    value: github.com/abangser/promise-ci-cd//tf-modules/s3-bucket?ref=main
+                    value: github.com/paintedwavelimited/promise-ci-cd//tf-modules/s3-bucket?ref=main
                 image: ghcr.io/syntasso/kratix-cli/terraform-generate:v0.6.0
                 name: terraform-generate
 status:
